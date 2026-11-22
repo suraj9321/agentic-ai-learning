@@ -1,0 +1,20 @@
+[project]
+name = "agentic-ai-learning"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.11.0",
+    "pydantic>=2.14.4",
+    "python-dotenv>=1.2.4",
+    "rich>=15.0.0",
+]
+
+# Makes the shared helpers in course_utils/ importable from every lesson folder
+# (`from course_utils import trace`). `uv sync` installs this project into .venv in
+# "editable" mode, so changes to course_utils/ take effect immediately.
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["course_utils"]
