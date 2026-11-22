@@ -40,6 +40,9 @@ Every lesson uses `course_utils/trace.py` to print what happens at each step:
   tokens, cost and time
 - ⚙️ **YOUR CODE RUNS THE TOOL**: which function ran, the arguments the model chose, and the result
 
+Phase 2 adds ✂️ **chunks** and 🔎 **RETRIEVAL** panels. Phase 3 shows the same panels for LangChain runs
+via `course_utils/lc_trace.py`, a LangChain callback handler (pass `config={"callbacks": [Tracer()]}`).
+
 Control it from `.env` with no code changes: `TRACE=full` (default) · `TRACE=brief` (one line per call) · `TRACE=off`,
 and `TRACE_MAX_CHARS=500` to cut long texts (`0` = show everything).
 
@@ -79,10 +82,14 @@ Tick boxes as you go (`[ ]` → `[x]`).
 - [ ] 🛠 Mini-project: chat with your documents (PDFs) with citations
 
 ### Phase 3: LangChain + LangSmith (Week 3) → `03-langchain/`
-- [ ] Chat models, prompts, structured output, LCEL/runnables
-- [ ] Tools, retrievers, `create_agent`
-- [ ] LangSmith tracing: read traces, debug a failing agent
-- [ ] 🛠 Port Phase 1 + 2 projects to LangChain
+- [ ] LangSmith account + tracing on (`.env`)
+- [ ] 01 Chat models & messages (`init_chat_model`, invoke/stream/batch)
+- [ ] 02 Prompt templates, LCEL, structured output
+- [ ] 03 Tools & `create_agent` (by hand with `bind_tools` first), memory
+- [ ] 04 RAG with LangChain (splitters, vector stores, retrievers, custom retriever)
+- [ ] 05 LangSmith: tags/metadata, `@traceable`, feedback, 🐛 bug hunt
+- [ ] 06 Middleware: limits, model routing, guardrails, PII, summarisation
+- [ ] 🛠 Mini-project: research agent rebuilt with LangChain + your documents
 
 ### Phase 4: LangGraph (Weeks 4–5) → `04-langgraph/`
 - [ ] State, nodes, edges, reducers, conditional routing
@@ -118,5 +125,5 @@ Tick boxes as you go (`[ ]` → `[x]`).
 
 ---
 
-Phases 2–8 are written when you reach them, so each one fits your pace and questions
+Phases 4–8 are written when you reach them, so each one fits your pace and questions
 and uses the latest LangChain/LangGraph APIs (they change often).

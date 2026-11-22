@@ -32,3 +32,20 @@ Rewrite answers as your understanding improves. This becomes your interview prep
 ### How do you stop a RAG bot from hallucinating? From leaking one customer's data to another?
 
 ### Classic RAG vs agentic RAG: trade-offs?
+
+## Phase 3: LangChain + LangSmith
+### What is a Runnable / LCEL? When would you NOT use LCEL?
+
+### What does `create_agent` do under the hood?
+
+### How does a tool's docstring affect agent behaviour?
+
+### How does conversation memory work in a LangChain agent (checkpointer, thread_id)?
+
+### What is middleware in LangChain agents? Give 3 production uses.
+
+### How do you debug an agent that gives a confident but wrong answer?
+
+### LangChain vs the raw provider SDK: trade-offs? When would you pick each?
+
+### What do you look at in a LangSmith trace? How do tags, metadata and feedback help in production?
