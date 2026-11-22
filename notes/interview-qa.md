@@ -15,4 +15,20 @@ Rewrite answers as your understanding improves. This becomes your interview prep
 ### How do you keep an agent safe and within budget?
 
 ## Phase 2: RAG
-### (fill in during Week 2)
+### What is RAG, and when would you use it instead of fine-tuning?
+
+### What is an embedding? How does semantic search work?
+
+### How do you choose a chunk size? What does overlap do?
+
+### Why use hybrid search? How does Reciprocal Rank Fusion work?
+
+### What does a reranker do, and why not use it for the whole search?
+
+### How do you evaluate a RAG system? (retrieval metrics vs answer quality)
+
+### Your RAG bot gives a wrong answer. How do you debug it?
+
+### How do you stop a RAG bot from hallucinating? From leaking one customer's data to another?
+
+### Classic RAG vs agentic RAG: trade-offs?

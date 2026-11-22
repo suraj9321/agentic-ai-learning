@@ -1,0 +1,14 @@
+[
+  {"question": "How long do I have to ask for my money back?", "expected_source": "refunds_and_billing.md"},
+  {"question": "What does ERR-4012 mean and how do I fix it?", "expected_source": "troubleshooting.md"},
+  {"question": "How much does an extra seat cost on Pro?", "expected_source": "pricing.md"},
+  {"question": "Can our data stay in Europe?", "expected_source": "security.md"},
+  {"question": "Is Nimbus OK for recording doctor-patient conversations?", "expected_source": "security.md"},
+  {"question": "How do I post meeting notes to a Slack channel?", "expected_source": "integrations.md"},
+  {"question": "What happens if my card payment fails?", "expected_source": "refunds_and_billing.md"},
+  {"question": "My video file is too big to upload, what should I do?", "expected_source": "troubleshooting.md"},
+  {"question": "What is the difference between an admin and a member?", "expected_source": "onboarding.md"},
+  {"question": "How many API requests can I make per minute?", "expected_source": "integrations.md"},
+  {"question": "Do you give discounts to students?", "expected_source": "pricing.md"},
+  {"question": "How long are transcripts kept on the Starter plan?", "expected_source": "security.md"}
+]

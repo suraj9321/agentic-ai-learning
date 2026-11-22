@@ -10,3 +10,6 @@ __pycache__/
 # OS / editor
 .DS_Store
 .vscode/
+
+# Downloaded models and local vector databases
+.cache/

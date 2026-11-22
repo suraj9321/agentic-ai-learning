@@ -16,6 +16,14 @@ Control the detail level from .env (no code changes needed):
     TRACE=full | brief | off          (default: full)
     TRACE_MAX_CHARS=500               (cut long texts; 0 = never cut)
 
+Phase 2 (RAG) adds:
+    trace.show_vector(text, vector)            # 🔢 what an embedding looks like
+    trace.show_chunks(chunks)                  # ✂️  how documents were split
+    trace.show_retrieval(query, results)       # 🔎 what the search returned, with scores
+
+Phase 3 (LangChain) adds course_utils/lc_trace.py, which prints the same panels for
+LangChain/LangGraph runs.
+
 This is a "poor man's LangSmith". In Phase 3 you'll get the same view in a web UI.
 """
 
@@ -26,6 +34,7 @@ import time
 from rich.console import Console
 from rich.markup import escape
 from rich.panel import Panel
+from rich.table import Table
 
 console = Console()
 
@@ -359,3 +368,68 @@ def show_totals(label: str = "Totals") -> None:
         f"[bold]📊 {escape(label)}[/]: {t['calls']} model call(s), "
         f"{t['in']} input + {t['out']} output tokens, ≈ ${t['cost']:.5f}"
     )
+
+
+# =====================================================================================
+# Phase 2: RAG views
+# =====================================================================================
+def show_vector(text: str, vector, label: str = "") -> None:
+    """Show what an embedding is: a list of numbers."""
+    if _level() == "off":
+        return
+    vals = ", ".join(f"{v:+.3f}" for v in list(vector)[:8])
+    console.print(
+        f"[bold]🔢 embedding{': ' + escape(label) if label else ''}[/] "
+        f"\"{escape(_one_line(text, 50))}\" → [{vals}, … ] [dim]({len(vector)} numbers)[/]"
+    )
+
+
+def show_chunks(chunks: list[dict], label: str = "chunks", limit: int = 6) -> None:
+    """Show how documents were split: id, size, and the start/end of each chunk."""
+    level = _level()
+    if level == "off":
+        return
+    sizes = [len(c["text"]) for c in chunks]
+    head = (f"✂️  {label}: {len(chunks)} chunks, size min/avg/max = "
+            f"{min(sizes)}/{sum(sizes) // len(sizes)}/{max(sizes)} chars")
+    if level == "brief":
+        console.print(escape(head))
+        return
+    table = Table(title=head, title_justify="left", show_lines=True)
+    table.add_column("id", style="cyan", no_wrap=True)
+    table.add_column("chars", justify="right")
+    table.add_column("text (start … end)")
+    for c in chunks[:limit]:
+        t = c["text"]
+        shown = t if len(t) <= 160 else t[:90] + "  …  " + t[-60:]
+        shown = shown.replace("\n", "⏎ ")  # make line breaks visible (and the table shorter)
+        table.add_row(escape(str(c.get("id", "?"))), str(len(t)), escape(shown))
+    if len(chunks) > limit:
+        table.caption = f"(+{len(chunks) - limit} more)"
+    console.print(table)
+
+
+def show_retrieval(query: str, results: list[dict], label: str = "", score_name: str = "score") -> None:
+    """Show search results ranked: score, which chunk, and a snippet.
+
+    Each result is a dict with at least "text" and "score", plus optional "id"/"source".
+    """
+    level = _level()
+    if level == "off":
+        return
+    title = f"🔎 RETRIEVAL{': ' + label if label else ''}  query=\"{_one_line(query, 70)}\""
+    if level == "brief":
+        ids = [str(r.get("id", r.get("source", "?"))) for r in results]
+        console.print(f"[green]{escape(title)}[/] → {escape(', '.join(ids))}")
+        return
+    table = Table(title=escape(title), title_justify="left")
+    table.add_column("#", justify="right")
+    table.add_column(score_name, justify="right", style="bold")
+    table.add_column("chunk id", style="cyan", no_wrap=True)
+    table.add_column("snippet")
+    for rank, r in enumerate(results, start=1):
+        score = r.get("score")
+        score_s = f"{score:.3f}" if isinstance(score, (int, float)) else str(score)
+        table.add_row(str(rank), score_s, escape(str(r.get("id", r.get("source", "?")))),
+                      escape(_one_line(r["text"], 90)))
+    console.print(table)

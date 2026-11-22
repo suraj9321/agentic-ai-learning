@@ -56,23 +56,27 @@ and `TRACE_MAX_CHARS=500` to cut long texts (`0` = show everything).
 Tick boxes as you go (`[ ]` → `[x]`).
 
 ### Phase 0: Setup & mental model (Day 1) → `00-setup/`
-- [ ] Environment working (`check_setup.py` passes)
-- [ ] Read "How LLMs work for engineers"
+- [x] Environment working (`check_setup.py` passes)
+- [x] Read "How LLMs work for engineers"
 
 ### Phase 1: LLM APIs from scratch, no frameworks (Week 1) → `01-llm-basics/`
-- [ ] 01 First call: messages, roles, system prompts, tokens, cost
-- [ ] 02 Conversations & streaming
-- [ ] 03 Prompt engineering
-- [ ] 04 Structured output with Pydantic
-- [ ] 05 Tool calling by hand
-- [ ] 06 Agent loop from scratch (ReAct)
-- [ ] 07 Async & parallel calls
-- [ ] 🛠 Mini-project: CLI research assistant
+- [x] 01 First call: messages, roles, system prompts, tokens, cost
+- [x] 02 Conversations & streaming
+- [x] 03 Prompt engineering
+- [x] 04 Structured output with Pydantic
+- [x] 05 Tool calling by hand
+- [x] 06 Agent loop from scratch (ReAct)
+- [x] 07 Async & parallel calls
+- [x] 🛠 Mini-project: CLI research assistant
 
 ### Phase 2: RAG (Week 2) → `02-rag/`
-- [ ] Embeddings, chunking, vector stores (Chroma → pgvector)
-- [ ] RAG by hand, then better retrieval (hybrid search, reranking, query rewriting)
-- [ ] 🛠 Chat-with-your-PDFs with citations
+- [ ] 01 Embeddings & cosine similarity
+- [ ] 02 Loading & chunking documents
+- [ ] 03 Vector stores: by hand, then Chroma
+- [ ] 04 RAG by hand: grounded prompts, "I don't know", citations
+- [ ] 05 Better retrieval: BM25, hybrid (RRF), reranking, query rewriting + retrieval eval
+- [ ] 06 Agentic RAG: retrieval as a tool
+- [ ] 🛠 Mini-project: chat with your documents (PDFs) with citations
 
 ### Phase 3: LangChain + LangSmith (Week 3) → `03-langchain/`
 - [ ] Chat models, prompts, structured output, LCEL/runnables
