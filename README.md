@@ -205,3 +205,6 @@ Everything from the phase READMEs in one place. ⭐ = start here. Each phase REA
 - 📖 [Settings](https://code.claude.com/docs/en/settings) · [Memory](https://code.claude.com/docs/en/memory) · [Hooks reference](https://code.claude.com/docs/en/hooks)
 
 🎥 video · 🎓 course · 📓 notebooks/tutorial · 📖 reading · 🔧 tool. More resources get added here as Phases 4–7 and 9 are written.
+
+## License
+[MIT](LICENSE): free to use, adapt and share, with attribution.
