@@ -1,5 +1,5 @@
 [project]
-name = "agentic-ai-learning"
+name = "agentic-ai-learning-basics-to-langgraph-prod"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [

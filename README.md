@@ -12,7 +12,7 @@ You'll write an agent loop in plain Python before touching LangChain, so the fra
 ## Quick start
 
 ```bash
-cd agentic-ai-learning
+cd agentic-ai-learning-basics-to-langgraph-prod
 cp .env.example .env              # then paste your ANTHROPIC_API_KEY into .env
 uv sync                           # installs everything into .venv
 uv run python 00-setup/check_setup.py
