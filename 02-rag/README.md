@@ -84,3 +84,19 @@ ignores the context or invents citations · data leaking between tenants (a miss
 - Embeddings guide: https://platform.claude.com/docs/en/build-with-claude/embeddings
 - Citations feature of the Claude API (built-in alternative to our prompt-based citations): https://platform.claude.com/docs/en/build-with-claude/citations
 - Chroma docs: https://docs.trychroma.com · pgvector: https://github.com/pgvector/pgvector
+
+## 📺 Recommended videos & resources (by lesson)
+
+| Lesson | Resource | Notes |
+|---|---|---|
+| All | ⭐ [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) (LangChain, video playlist) | Short videos (~5–10 min each) on indexing, query rewriting, routing, reranking; watch alongside lessons 03–06 |
+| All | [What is Retrieval-Augmented Generation (RAG)?](https://www.youtube.com/watch?v=T-D1OfcDW1M) (IBM Technology, video) | A 6-minute "why RAG" before you start |
+| 01 | ⭐ [What are embeddings?](https://vickiboykis.com/what_are_embeddings/) (Vicki Boykis) | The best deep dive on embeddings for engineers; read the first chapters this week |
+| 01 | [Transformers, the tech behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M) (3Blue1Brown, video) | The first ~10 minutes show embeddings as directions in space |
+| 02 | ⭐ [The 5 Levels of Text Splitting](https://www.youtube.com/watch?v=8OJC21T2SL4) (Greg Kamradt, video) | Character → recursive → document-aware → semantic → agentic chunking |
+| 02 | [Chunking strategies](https://www.pinecone.io/learn/chunking-strategies/) (Pinecone) | The same ideas in a reading version, with trade-offs |
+| 05 | [Rerankers and two-stage retrieval](https://www.pinecone.io/learn/series/rag/rerankers/) (Pinecone) | Why bi-encoder + cross-encoder beats either alone |
+| 05 | [Retrieve & Re-Rank](https://www.sbert.net/examples/applications/retrieve_rerank/README.html) (Sentence Transformers) | A short, clear diagram of the same pipeline |
+| 05 | [Reciprocal Rank Fusion paper](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf) (Cormack et al.) | Two pages; the formula you implemented in hybrid search |
+| 04–06 | [Patterns for Building LLM-based Systems](https://eugeneyan.com/writing/llm-patterns/) (Eugene Yan) | RAG, evals, guardrails and caching in one long read; great interview prep |
+| Going further | [Retrieval Augmented Generation (RAG)](https://www.coursera.org/learn/retrieval-augmented-generation-rag) (DeepLearning.AI on Coursera) | A full course (several weeks) if you want to go deeper than this phase |

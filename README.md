@@ -47,7 +47,7 @@ Control it from `.env` with no code changes: `TRACE=full` (default) · `TRACE=br
 and `TRACE_MAX_CHARS=500` to cut long texts (`0` = show everything).
 
 ## Daily rhythm (full-time)
-- ~1.5h: read the lesson README and official docs
+- ~1.5h: read the lesson README and official docs, and watch the ⭐ videos in its "📺 Recommended videos & resources" section
 - ~4h: run the code, **break it**, change it, do the exercises
 - ~1h: build or extend the mini-project
 - ~30m: write notes in `notes/` in your own words, as answers to interview questions
@@ -127,3 +127,51 @@ Tick boxes as you go (`[ ]` → `[x]`).
 
 Phases 4–8 are written when you reach them, so each one fits your pace and questions
 and uses the latest LangChain/LangGraph APIs (they change often).
+
+---
+
+## 📺 All recommended videos & resources
+
+Everything from the phase READMEs in one place. ⭐ = start here. Each phase README says which lesson each one goes with.
+
+### Phase 0: How LLMs work
+- ⭐ 🎥 [Large Language Models explained briefly](https://www.youtube.com/watch?v=LPZh9BOjkQs) (3Blue1Brown, 8 min)
+- ⭐ 🎥 [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) (Andrej Karpathy, 1 h)
+- 🎥 [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI) (Andrej Karpathy, 3.5 h)
+- 🎥 [Transformers, the tech behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M) and [Attention, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc) (3Blue1Brown)
+- 🎥 [Let's build the GPT Tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE) (Andrej Karpathy, 2 h)
+- 🔧 [Tiktokenizer](https://tiktokenizer.vercel.app): see how text splits into tokens
+- 📖 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) (Jay Alammar)
+
+### Phase 1: LLM APIs from scratch
+- ⭐ 🎓 [Building with the Claude API](https://anthropic.skilljar.com/claude-with-the-anthropic-api) (Anthropic Academy, free video course)
+- ⭐ 📓 [Prompt engineering interactive tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) (Anthropic)
+- ⭐ 🎥 [How We Build Effective Agents](https://www.youtube.com/watch?v=D7_ipDqhtwk) (Barry Zhang, Anthropic)
+- 📓 [anthropics/courses](https://github.com/anthropics/courses): API fundamentals, prompting and tool use notebooks
+- 📖 [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) (Anthropic)
+- 📖 [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents) (Anthropic)
+- 📖 [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (Anthropic)
+- 📖 [ReAct paper](https://arxiv.org/abs/2210.03629) (Yao et al.)
+- 📖 [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) (Lilian Weng)
+- 📖 [Pydantic: Models](https://docs.pydantic.dev/latest/concepts/models/) · [Python asyncio: Coroutines and Tasks](https://docs.python.org/3/library/asyncio-task.html)
+- 📓 [Claude cookbooks](https://github.com/anthropics/claude-cookbooks)
+
+### Phase 2: RAG
+- ⭐ 🎥 [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) (LangChain, playlist)
+- ⭐ 📖 [What are embeddings?](https://vickiboykis.com/what_are_embeddings/) (Vicki Boykis)
+- ⭐ 🎥 [The 5 Levels of Text Splitting](https://www.youtube.com/watch?v=8OJC21T2SL4) (Greg Kamradt)
+- ⭐ 📖 [Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval) (Anthropic)
+- 🎥 [What is Retrieval-Augmented Generation (RAG)?](https://www.youtube.com/watch?v=T-D1OfcDW1M) (IBM Technology, 6 min)
+- 📖 [Chunking strategies](https://www.pinecone.io/learn/chunking-strategies/) · [Rerankers and two-stage retrieval](https://www.pinecone.io/learn/series/rag/rerankers/) (Pinecone)
+- 📖 [Retrieve & Re-Rank](https://www.sbert.net/examples/applications/retrieve_rerank/README.html) (Sentence Transformers)
+- 📖 [Reciprocal Rank Fusion paper](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf) (Cormack et al.)
+- 📖 [Patterns for Building LLM-based Systems](https://eugeneyan.com/writing/llm-patterns/) (Eugene Yan)
+- 🎓 [Retrieval Augmented Generation (RAG)](https://www.coursera.org/learn/retrieval-augmented-generation-rag) (DeepLearning.AI on Coursera, going further)
+
+### Phase 3: LangChain + LangSmith
+- ⭐ 🎓 [LangChain Essentials (Python)](https://academy.langchain.com/courses/langchain-essentials-python) (LangChain Academy, free)
+- ⭐ 📖 [LangSmith observability quickstart](https://docs.langchain.com/langsmith/observability-quickstart)
+- 🎓 [Intro to Building Agents](https://academy.langchain.com/bundles/intro-to-building-agents) (LangChain Academy, free)
+- 📖 [LangChain v1 release notes](https://docs.langchain.com/oss/python/releases/langchain-v1): check this before following older tutorials
+
+🎥 video · 🎓 course · 📓 notebooks/tutorial · 📖 reading · 🔧 tool. More resources get added here as Phases 4–8 are written.

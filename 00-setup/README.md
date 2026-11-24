@@ -91,6 +91,22 @@ That's why we **stream** (lesson 02) and run independent calls **in parallel** (
 
 ---
 
+## 📺 Recommended videos & resources
+Watch at least the ⭐ ones before Phase 1. The rest are for evenings or when something feels like magic.
+
+| | Resource | Why it's worth it | Time |
+|---|---|---|---|
+| ⭐ | [Large Language Models explained briefly](https://www.youtube.com/watch?v=LPZh9BOjkQs) (3Blue1Brown) | The best short visual intro to "predict the next token" | 8 min |
+| ⭐ | [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) (Andrej Karpathy) | The mental model for engineers: training, tokens, tools, security | 1 h |
+| | [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI) (Andrej Karpathy) | The long version: pretraining, fine-tuning, RLHF, hallucinations, tool use | 3.5 h |
+| | [Transformers, the tech behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M) and [Attention, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc) (3Blue1Brown) | What happens inside the model; also introduces embeddings (useful for Phase 2) | 27 + 26 min |
+| | [Let's build the GPT Tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE) (Andrej Karpathy) | Why tokens are weird (and why some prompts cost more than you expect) | 2 h |
+| | [Tiktokenizer](https://tiktokenizer.vercel.app) | Paste text and *see* how it splits into tokens | 5 min |
+| | [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) (Jay Alammar) | The classic illustrated reading version of the transformer | 30 min |
+
+> 💡 You don't need the transformer internals to build agents. Interviewers do like it when you can
+> explain tokens, context windows and sampling clearly, so the first two videos are the priority.
+
 ## ✅ Done when
 - `check_setup.py` prints all green
 - You can explain to a friend, in your own words: token, context window, why the model is "stateless", and what tool use really is.

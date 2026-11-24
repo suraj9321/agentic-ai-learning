@@ -75,3 +75,18 @@ production teams use LangGraph for orchestration and call provider SDKs directly
 - Agents (`create_agent`) and middleware: https://docs.langchain.com/oss/python/langchain/agents
 - LangSmith observability: https://docs.langchain.com/langsmith/observability
 - Anthropic integration: https://docs.langchain.com/oss/python/integrations/chat/anthropic
+
+## 📺 Recommended videos & resources (by lesson)
+
+| Lesson | Resource | Notes |
+|---|---|---|
+| All | ⭐ [LangChain Essentials (Python)](https://academy.langchain.com/courses/langchain-essentials-python) (LangChain Academy, free, video) | The official quickstart for LangChain v1: `create_agent`, tools, memory, middleware |
+| All | [Intro to Building Agents](https://academy.langchain.com/bundles/intro-to-building-agents) (LangChain Academy, free) | The learning path that continues from Essentials; good to start before Phase 4 |
+| 03, 06 | [LangChain v1 release notes](https://docs.langchain.com/oss/python/releases/langchain-v1) | What changed in v1 (`create_agent`, middleware). Many tutorials online still use the old APIs, so check this first |
+| 04 | [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) (LangChain, video playlist) | Now map each video to the LangChain components you use in lesson 04 |
+| 05 | ⭐ [LangSmith observability quickstart](https://docs.langchain.com/langsmith/observability-quickstart) | Tracing setup, `@traceable` and reading the run tree |
+| 03 | [How We Build Effective Agents](https://www.youtube.com/watch?v=D7_ipDqhtwk) (Barry Zhang, Anthropic, video) | Rewatch it: which parts does `create_agent` do for you, and which are still your job? |
+
+> ⚠️ GOTCHA: LangChain changes fast. If a video or blog post uses `initialize_agent`, `AgentExecutor`,
+> `LLMChain` or `langgraph.prebuilt.create_react_agent`, it predates v1. Learn the idea, but write the code
+> the way the lessons and the official docs do.

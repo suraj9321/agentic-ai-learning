@@ -59,3 +59,19 @@ Block types: `text`, `tool_use`, `thinking`, ... Always check `block.type`.
 - Tool use: https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview
 - Prompt engineering: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
 - "Building effective agents" (Anthropic, a must-read for interviews): https://www.anthropic.com/engineering/building-effective-agents
+
+## 📺 Recommended videos & resources (by lesson)
+
+| Lesson | Resource | Notes |
+|---|---|---|
+| All | ⭐ [Building with the Claude API](https://anthropic.skilljar.com/claude-with-the-anthropic-api) (Anthropic Academy, free, video) | The official video course; covers the whole of this phase and previews RAG, MCP and caching |
+| All | [anthropics/courses](https://github.com/anthropics/courses) (notebooks) | API fundamentals, prompt engineering, tool use: runnable notebooks |
+| 03 | ⭐ [Prompt engineering interactive tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Nine chapters with exercises; do 1–2 chapters a day this week |
+| 04 | [Pydantic: Models](https://docs.pydantic.dev/latest/concepts/models/) | `BaseModel`, validation and `model_json_schema()`, the basis of structured output |
+| 05 | [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents) (Anthropic) | How to name and describe tools and shape their results so the model uses them well |
+| 06 | ⭐ [How We Build Effective Agents](https://www.youtube.com/watch?v=D7_ipDqhtwk) (Barry Zhang, Anthropic, AI Engineer, video) | The talk version of "Building effective agents": when to use an agent vs a workflow |
+| 06 | [ReAct paper](https://arxiv.org/abs/2210.03629) (Yao et al.) | The paper behind the reason → act → observe loop you build by hand; the abstract and figure 1 are enough |
+| 06 | [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) (Lilian Weng) | The classic overview: planning, memory, tool use |
+| 06 | [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (Anthropic) | Why the messages list keeps growing and how to manage it; good interview material |
+| 07 | [Python docs: Coroutines and Tasks](https://docs.python.org/3/library/asyncio-task.html) | `async`/`await`, `asyncio.gather`, `Semaphore` |
+| Project | [Claude cookbooks](https://github.com/anthropics/claude-cookbooks) | Copy-able recipes for tool use, agents and more; browse for ideas to extend your assistant |
