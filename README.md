@@ -8,7 +8,7 @@ A hands-on, 9-week course (full-time pace) built for two goals:
 You'll write an agent loop in plain Python before touching LangChain, so the frameworks never feel like magic.
 
 
-For Deep Dive into AI/ML step by step - 
+Optional - For Deep Dive into AI/ML step by step (Can be done later on as a developer)
 
 - **Classical ML**: [`classical-machine-learning-basic-to-advanced-in-steps`](https://github.com/suraj9321/classical-machine-learning-basic-to-advanced-in-steps)
 - **Deep learning**: [`deep-learning-cv-nlp-llm-zero-to-hero`](https://github.com/suraj9321/deep-learning-cv-nlp-llm-zero-to-hero)
