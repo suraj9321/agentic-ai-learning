@@ -65,6 +65,7 @@ def fixed_chunks(text: str, size: int = 300, overlap: int = 50) -> list[str]:
 pricing = next(d for d in docs if d["source"] == "pricing.md")
 # 🐍 PYTHON NOTE: next(generator) returns the first item the generator produces:
 # here, the first document whose source is pricing.md.
+print(pricing)
 
 naive = [{"id": f"pricing.md#{i}", "text": t} for i, t in enumerate(fixed_chunks(pricing["text"]))]
 trace.show_chunks(naive, label="fixed 300 chars, 50 overlap", limit=4)
