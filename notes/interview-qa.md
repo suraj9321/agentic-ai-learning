@@ -49,3 +49,20 @@ Rewrite answers as your understanding improves. This becomes your interview prep
 ### LangChain vs the raw provider SDK: trade-offs? When would you pick each?
 
 ### What do you look at in a LangSmith trace? How do tags, metadata and feedback help in production?
+
+## Phase 8: Claude Code & agent tooling
+### Walk me through what happens inside a coding agent when I ask it to fix a failing test.
+
+### How would you stop a coding agent from leaking secrets? Name at least three layers.
+
+### What is progressive disclosure, and where does it show up in agent design?
+
+### What is MCP, and how does it relate to tool calling? Tools vs resources vs prompts?
+
+### Why do multi-agent systems use subagents? What's the trade-off?
+
+### Prompt instructions vs hooks/middleware for agent guardrails: when do you need each?
+
+### How would you run an AI agent safely in CI? What can go wrong?
+
+### Raw API vs a framework vs an agent SDK: how do you choose for a new product?

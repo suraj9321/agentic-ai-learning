@@ -1,0 +1,6 @@
+{
+  "name": "course-companion",
+  "description": "A study kit for learning to code with Claude Code: quizzes, a read-only code reviewer, a safety hook, and live docs for LangChain and the Claude API.",
+  "version": "1.0.0",
+  "author": { "name": "Agentic AI course" }
+}

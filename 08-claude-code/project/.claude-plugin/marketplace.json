@@ -1,0 +1,14 @@
+{
+  "name": "agentic-course",
+  "description": "Study tools from the agentic AI course.",
+  "owner": {
+    "name": "Agentic AI course"
+  },
+  "plugins": [
+    {
+      "name": "course-companion",
+      "source": "./course-companion",
+      "description": "Quizzes, a read-only code reviewer, a safety hook, and live docs MCP servers."
+    }
+  ]
+}

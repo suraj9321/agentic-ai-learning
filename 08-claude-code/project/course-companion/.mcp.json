@@ -1,0 +1,6 @@
+{
+  "mcpServers": {
+    "langchain-docs": { "type": "http", "url": "https://docs.langchain.com/mcp" },
+    "claude-platform-docs": { "type": "http", "url": "https://platform.claude.com/docs/mcp" }
+  }
+}

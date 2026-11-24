@@ -1,6 +1,6 @@
 # Agentic AI Engineering — from basics to LangGraph in production
 
-A hands-on, 8-week course (full-time pace) built for two goals:
+A hands-on, 9-week course (full-time pace) built for two goals:
 1. **Getting hired as an AI engineer**: portfolio projects plus a solid grasp of how agents actually work.
 2. **Building your own AI product**: shipping, keeping costs down, and reliability.
 
@@ -16,6 +16,7 @@ cd agentic-ai-learning-basics-to-langgraph-prod
 cp .env.example .env              # then paste your ANTHROPIC_API_KEY into .env
 uv sync                           # installs everything into .venv
 uv run python 00-setup/check_setup.py
+claude                            # Claude Code, your AI pair programmer (see 00-setup/claude-code-essentials.md)
 ```
 
 Run any lesson with `uv run python <path-to-file>`, e.g.
@@ -61,6 +62,7 @@ Tick boxes as you go (`[ ]` → `[x]`).
 ### Phase 0: Setup & mental model (Day 1) → `00-setup/`
 - [x] Environment working (`check_setup.py` passes)
 - [x] Read "How LLMs work for engineers"
+- [ ] Claude Code essentials: install, context habits, plan mode, Learning output style, CLAUDE.md, permissions, using skills and MCP (`claude-code-essentials.md`)
 
 ### Phase 1: LLM APIs from scratch, no frameworks (Week 1) → `01-llm-basics/`
 - [x] 01 First call: messages, roles, system prompts, tokens, cost
@@ -106,10 +108,9 @@ Tick boxes as you go (`[ ]` → `[x]`).
 - [ ] 🛠 Eval suite for the Phase 4 project
 
 ### Phase 6: Ecosystem (Week 6b) → `06-ecosystem/`
-- [ ] MCP: build a server, connect it to an agent
 - [ ] Guardrails & security (prompt injection, tool permissions, PII)
 - [ ] Reliability: retries, fallbacks, caching, rate limits
-- [ ] Tour: OpenAI Agents SDK, Claude Agent SDK, Pydantic AI, CrewAI
+- [ ] Tour: OpenAI Agents SDK, Pydantic AI, CrewAI (MCP and the Claude Agent SDK are covered in Phase 8)
 
 ### Phase 7: Production (Week 7) → `07-production/`
 - [ ] FastAPI + streaming (SSE), simple frontend
@@ -117,7 +118,18 @@ Tick boxes as you go (`[ ]` → `[x]`).
 - [ ] Cost engineering: model routing, prompt caching, token budgets
 - [ ] LLM system design practice
 
-### Phase 8: Capstone (Week 8) → `08-capstone/`
+### Phase 8: Build & extend Claude Code (Week 8) → `08-claude-code/`
+- [ ] 01 Claude Code as an agent: the loop, mapped to Phases 1–5
+- [ ] 02 Memory, settings and permissions: requests vs guarantees, prompt injection
+- [ ] 03 Skills: progressive disclosure, your own skill
+- [ ] 04 MCP: build a server, use it from Claude Code and your own agent
+- [ ] 05 Subagents: context isolation, parallel work
+- [ ] 06 Hooks: guaranteed behaviour around tool calls
+- [ ] 07 Automation: headless `claude -p`, GitHub Actions, worktrees
+- [ ] 08 Plugins and the Claude Agent SDK
+- [ ] 🛠 Mini-project: "course companion" plugin, installable from a marketplace
+
+### Phase 9: Capstone (Week 9) → `09-capstone/`
 - [ ] Idea picked (keep `notes/ideas.md` growing until then!)
 - [ ] LangGraph agent + RAG + tools/MCP + human-in-the-loop
 - [ ] Tracing + eval suite with a score
@@ -125,7 +137,7 @@ Tick boxes as you go (`[ ]` → `[x]`).
 
 ---
 
-Phases 4–8 are written when you reach them, so each one fits your pace and questions
+Phases 4–7 and 9 are written when you reach them, so each one fits your pace and questions
 and uses the latest LangChain/LangGraph APIs (they change often).
 
 ---
@@ -142,6 +154,7 @@ Everything from the phase READMEs in one place. ⭐ = start here. Each phase REA
 - 🎥 [Let's build the GPT Tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE) (Andrej Karpathy, 2 h)
 - 🔧 [Tiktokenizer](https://tiktokenizer.vercel.app): see how text splits into tokens
 - 📖 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) (Jay Alammar)
+- ⭐ 📖 [Claude Code quickstart](https://code.claude.com/docs/en/quickstart) · [Claude Code best practices](https://code.claude.com/docs/en/best-practices): for `claude-code-essentials.md`
 
 ### Phase 1: LLM APIs from scratch
 - ⭐ 🎓 [Building with the Claude API](https://anthropic.skilljar.com/claude-with-the-anthropic-api) (Anthropic Academy, free video course)
@@ -174,4 +187,11 @@ Everything from the phase READMEs in one place. ⭐ = start here. Each phase REA
 - 🎓 [Intro to Building Agents](https://academy.langchain.com/bundles/intro-to-building-agents) (LangChain Academy, free)
 - 📖 [LangChain v1 release notes](https://docs.langchain.com/oss/python/releases/langchain-v1): check this before following older tutorials
 
-🎥 video · 🎓 course · 📓 notebooks/tutorial · 📖 reading · 🔧 tool. More resources get added here as Phases 4–8 are written.
+### Phase 8: Build & extend Claude Code
+- ⭐ 📖 [Claude Code docs](https://code.claude.com/docs/en/overview): features change monthly; also an MCP server at `https://code.claude.com/docs/mcp`
+- ⭐ 📖 [Skills](https://code.claude.com/docs/en/skills) · [Subagents](https://code.claude.com/docs/en/sub-agents) · [Hooks guide](https://code.claude.com/docs/en/hooks-guide) · [Headless mode](https://code.claude.com/docs/en/headless)
+- ⭐ 📖 [Model Context Protocol: introduction](https://modelcontextprotocol.io/introduction) · [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · [Claude Code + MCP](https://code.claude.com/docs/en/mcp)
+- ⭐ 📖 [Claude Agent SDK overview](https://code.claude.com/docs/en/agent-sdk/overview) · [Plugins](https://code.claude.com/docs/en/plugins/overview) · [GitHub Actions](https://code.claude.com/docs/en/github-actions)
+- 📖 [Settings](https://code.claude.com/docs/en/settings) · [Memory](https://code.claude.com/docs/en/memory) · [Hooks reference](https://code.claude.com/docs/en/hooks)
+
+🎥 video · 🎓 course · 📓 notebooks/tutorial · 📖 reading · 🔧 tool. More resources get added here as Phases 4–7 and 9 are written.
