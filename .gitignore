@@ -13,3 +13,8 @@ __pycache__/
 
 # Downloaded models and local vector databases
 .cache/
+
+# Claude Code: personal files (the shared ones in .claude/ ARE committed)
+.claude/settings.local.json
+CLAUDE.local.md
+.claude/worktrees/

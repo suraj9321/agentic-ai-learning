@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "course": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "08-claude-code/mcp_server/server.py"]
+    },
+    "langchain-docs": {
+      "type": "http",
+      "url": "https://docs.langchain.com/mcp"
+    },
+    "claude-platform-docs": {
+      "type": "http",
+      "url": "https://platform.claude.com/docs/mcp"
+    }
+  }
+}

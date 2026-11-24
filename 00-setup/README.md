@@ -91,6 +91,13 @@ That's why we **stream** (lesson 02) and run independent calls **in parallel** (
 
 ---
 
+## 3. Claude Code essentials (~half a day) → [`claude-code-essentials.md`](claude-code-essentials.md)
+The AI coding agent you'll use for the whole course and for the apps you build alongside it:
+install it, manage context, plan before coding, set it up for *learning* (not copying), CLAUDE.md,
+permissions, and using Skills and MCP servers. Phase 8 goes deep and you'll build your own.
+
+---
+
 ## 📺 Recommended videos & resources
 Watch at least the ⭐ ones before Phase 1. The rest are for evenings or when something feels like magic.
 
@@ -102,6 +109,8 @@ Watch at least the ⭐ ones before Phase 1. The rest are for evenings or when so
 | | [Transformers, the tech behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M) and [Attention, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc) (3Blue1Brown) | What happens inside the model; also introduces embeddings (useful for Phase 2) | 27 + 26 min |
 | | [Let's build the GPT Tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE) (Andrej Karpathy) | Why tokens are weird (and why some prompts cost more than you expect) | 2 h |
 | | [Tiktokenizer](https://tiktokenizer.vercel.app) | Paste text and *see* how it splits into tokens | 5 min |
+| ⭐ | [Claude Code quickstart](https://code.claude.com/docs/en/quickstart) | The official first steps, for section 3 | 20 min |
+| | [Claude Code best practices](https://code.claude.com/docs/en/best-practices) | Context, planning and workflow habits from the team that builds it | 30 min |
 | | [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) (Jay Alammar) | The classic illustrated reading version of the transformer | 30 min |
 
 > 💡 You don't need the transformer internals to build agents. Interviewers do like it when you can
@@ -109,5 +118,6 @@ Watch at least the ⭐ ones before Phase 1. The rest are for evenings or when so
 
 ## ✅ Done when
 - `check_setup.py` prints all green
+- Claude Code works in this repo (see the ✅ list at the end of `claude-code-essentials.md`)
 - You can explain to a friend, in your own words: token, context window, why the model is "stateless", and what tool use really is.
   (Write it in `notes/interview-qa.md`!)
